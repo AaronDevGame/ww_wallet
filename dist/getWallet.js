@@ -4,9 +4,7 @@ console.log("WALLET HERE");
 // window.cardano.isEnabled();
 
 //popout nami wallet
-window.cardano.enable();
-
-await activateCardano();
+// window.cardano.enable();
 
 if(window.cardano.isEnabled()) {
     console.log("\n cardano is enabled");
@@ -34,18 +32,11 @@ if(window.cardano.isEnabled()) {
 
 }
 
-// console.log("W - C = " + window.activateCardano);
-
-// console.log("N - ID = " + window.wallet);
-// window.cardano.enable();
-// window.activateCardano();
-
-// setInterval(function () {if(window.hasOwnProperty('wallet_address')) {console.log('wallet address is: '+window.wallet_address);} }, 5000);
 let x;
 let y = [];
 setTimeout(function () {
     if(window.hasOwnProperty('wallet_address')) {
-        console.log('wallet address is: '+window.wallet_address);
+        console.log('\n wallet address is: '+window.wallet_address);
         x = window.owned_nfts;
         console.log('ok NFT x = : '+ x);
         console.log("type = " + typeof x);
@@ -56,33 +47,8 @@ setTimeout(function () {
         console.log("type 0 = " + typeof y[0]);
         console.log("YEHEY!");
     } else {
-        console.log('no wallet address');
+        console.log('\n no wallet address');
     }
 }, 1000);
-
-var setup = async() => {
-
-    console.log('@@@@@@@@@@@@@@@@');
-
-    // const S = await import('@emurgo/cardano-serialization-lib-browser/cardano_serialization_lib.js');
-
-// console.log("S = " + window.cardano.S);
-
-    // const tradeDetails = Loader.Cardano.PlutusList.new();
-    // console.log(typeof tradeDetails);
-    // console.log(typeof Loader.tradeDetails);
-
-    // try {
-    //     return Loader.Cardano.BaseAddress.from_address(
-    //       Loader.Cardano.Address.from_bytes(
-    //         // fromHex((await window.cardano.selectedWallet.getUsedAddresses())[0])
-    //         fromHex((await window.cardano.selectedWallet.getUsedAddresses())[0])
-    //         // console.log('asdasd')
-    //       )
-    //     );
-    //   } catch (e) {console.log("error")}
-};
-
-setup();
 
 console.log("END HERE");
