@@ -1,18 +1,15 @@
-
-
-
-console.log("WALET HERE");
-console.log(window.cardano);
+console.log("WALLET HERE");
+// console.log(window.cardano);
 
 // window.cardano.isEnabled();
 
 //popout nami wallet
 window.cardano.enable();
 
-// await activateCardano();
+await activateCardano();
 
 if(window.cardano.isEnabled()) {
-    // console.log("cardano is enabled");
+    console.log("\n cardano is enabled");
     
     // console.log("window.wallet_address = " + window.wallet_address);
 
@@ -33,7 +30,7 @@ if(window.cardano.isEnabled()) {
 
 
 } else {
-    console.log("cardano NOT is enabled");
+    console.log("\n cardano is not enabled");
 
 }
 
@@ -47,7 +44,7 @@ if(window.cardano.isEnabled()) {
 let x;
 let y = [];
 setTimeout(function () {
-    // if(window.hasOwnProperty('wallet_address')) {
+    if(window.hasOwnProperty('wallet_address')) {
         console.log('wallet address is: '+window.wallet_address);
         x = window.owned_nfts;
         console.log('ok NFT x = : '+ x);
@@ -58,7 +55,9 @@ setTimeout(function () {
         console.log("type = " + typeof y);
         console.log("type 0 = " + typeof y[0]);
         console.log("YEHEY!");
-    // } 
+    } else {
+        console.log('no wallet address');
+    }
 }, 1000);
 
 var setup = async() => {
